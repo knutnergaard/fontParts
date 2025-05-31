@@ -13,6 +13,12 @@ Layer
     * sub-object with basic usage
     * glyph interaction with basic usage
 
+***********
+Description
+***********
+
+The :class:`Layer <BaseLayer>` object represents a single layer within a font, typically containing glyphs for a particular drawing or editing context. It behaves like a :class:`dict` that maps glyph names to :class:`BaseGlyph <BaseGlyph>` objects, supporting standard dictionary operations such as item access, assignment, deletion, and iteration.
+
 ********
 Overview
 ********
