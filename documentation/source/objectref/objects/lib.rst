@@ -14,7 +14,7 @@ The :class:`Lib <BaseLib>` object is a place to store arbitrary data for a :clas
 - keys must be :class:`str` 
 - values must be a :class:`~fontParts.base.annotations.LibValue`
 
-:class:`Font <BaseFont>` and :class:`Glyph <BaseGlyph>` libs are accessed trough their respective :attr:`Font.lib <BaseFont.lib>` and :attr:`Glyph.lib <BaseGlyph.lib>` attributes.
+:class:`Font <BaseFont>` and :class:`Glyph <BaseGlyph>` libs are accessed through their respective :attr:`Font.lib <BaseFont.lib>` and :attr:`Glyph.lib <BaseGlyph.lib>` attributes.
 
 
 ********
