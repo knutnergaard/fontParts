@@ -20,9 +20,16 @@ Description
 
 The :class:`Font <BaseFont>` object is the central part that connects all glyphs with font information like names, key dimensions etc.
 
-:class:`Font <BaseFont>` objects behave like dictionaries: the glyph name is the key and the returned value is a :class:`Glyph <BaseGlyph>` object for that glyph. If the glyph does not exist, :class:`Font <BaseFont>` will raise an :class:`IndexError`.
+A :class:`Font <BaseFont>` contains one or more :class:`Layer <BaseLayer>` instances, each of which represents a collection of glyphs in a specific drawing or editing context. By default, most operations interact with the font's default layer.
 
-:class:`Font <BaseFont>` has a couple of important sub-objects which are worth checking out. The font’s kerning is stored in a :class:`Kerning <BaseKerning>` object and can be reached as an attribute at ``Font.kerning``. Fontnames, key dimensions, flags etc are stored in a :class:`Info <BaseInfo>` object which is available through ``Font.info``. The ``Font.lib`` is a :class:`Lib <BaseLib>` object which behaves as a dictionary.
+:class:`Font <BaseFont>` instances behave like dictionaries mapping glyph names to :class:`Glyph <BaseGlyph>` instances — specifically those in the default layer. If the glyph does not exist, the font will raise an :class:`IndexError`.
+
+In addition to glyphs and layers, the font has several important sub-objects:
+
+- A :class:`Kerning <BaseKerning>` object for managing kerning pairs, accessible through
+  the :attr:`~BaseFont.kerning` attribute.
+- An :class:`Info <BaseInfo>` object storing font-wide metadata like font names, key dimensions, and flags, accessible through the :attr:`~BaseFont.info` attribute. 
+- A :class:`Lib <BaseLib>` object that stores arbitrary metadata, behaving like a :class:`dict`, accessible through the :attr:`~BaseFont.lib` attribute.
 
 ********
 Overview
